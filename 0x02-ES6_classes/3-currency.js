@@ -15,12 +15,16 @@ export default class Currency {
   set name(user) {
     if (typeof (user) === 'string') {
       this._name = user;
+    } else {
+      throw new Error('Name must be a string');
     }
   }
 
   set code(dol) {
     if (typeof (dol) === 'string') {
       this._code = dol;
+    } else {
+      throw new Error('Code must be a string');
     }
   }
 
